@@ -1,0 +1,97 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+  int binary[10][4] = 	{
+    					{0,0,0,0},
+                        {0,0,0,1},
+                        {0,0,1,0},
+                        {0,0,1,1},
+                        {0,1,0,0},
+                        {0,1,0,1},
+                        {0,1,1,0},
+                        {0,1,1,1},
+                        {1,0,0,0},
+                        {1,0,0,1}
+  						};
+  int i = 9;
+  int ones = 1;
+  for(i;i > 0;i--) {
+   	
+    
+    if(ones > -1){
+      
+		
+      
+      
+      
+      
+      digitalWrite(9,binary[i][0]);
+      digitalWrite(8,binary[i][1]);
+      digitalWrite(7,binary[i][2]);
+      digitalWrite(6,binary[i][3]);
+      
+      digitalWrite(5,binary[ones][0]);
+      digitalWrite(4,binary[ones][1]);
+      digitalWrite(3,binary[ones][2]);
+      digitalWrite(2,binary[ones][3]);
+      
+      
+      delay(1000);
+      if(i == 1){
+     
+        digitalWrite(9,binary[0][0]);
+        digitalWrite(8,binary[0][1]);
+        digitalWrite(7,binary[0][2]);
+        digitalWrite(6,binary[0][3]);
+        
+        digitalWrite(5,binary[ones][0]);
+        digitalWrite(4,binary[ones][1]);
+        digitalWrite(3,binary[ones][2]);
+        digitalWrite(2,binary[ones][3]);
+        delay(1000);
+        ones = ones - 1;
+        
+        
+  
+      }
+      else{
+      	digitalWrite(9,binary[i][0]);
+        digitalWrite(8,binary[i][1]);
+        digitalWrite(7,binary[i][2]);
+        digitalWrite(6,binary[i][3]);
+      
+      }
+   
+    }
+    
+    if(i == 1){
+      i =9;
+    }
+    //if(i == 0 && ones == 0){
+      //i =9;
+      //ones =9;
+    //}
+   
+    
+   	
+   
+    
+    
+  }
+	
+  
+}
