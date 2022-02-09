@@ -216,21 +216,18 @@ void ninetozero(int timer){
 void loop()
 {	
   	int timer = 1000;
-  	int temp = 0;
   	inPin = digitalRead(9);
   
     if(inPin == 1){
-      temp = 1;
-      if(temp == 1){
-        temp =0;
-        count0();
+      
+      while (true){
+      	ninetozero(timer); 
       }
-      ninetozero(timer);
-      	
-    }
-    
 	
- 
-
-
+    }
+    else{
+      count0();
+      
+    }
+   
 }
