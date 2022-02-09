@@ -1,0 +1,187 @@
+// C++ code
+//
+
+char inPin = 1;
+
+void count0()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,HIGH); 
+digitalWrite(2,LOW); 
+digitalWrite(4,LOW); 
+digitalWrite(5,LOW); 
+digitalWrite(6,LOW); 
+digitalWrite(7,LOW); 
+digitalWrite(8,LOW);
+}
+void count1()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,HIGH); 
+digitalWrite(2,LOW); 
+digitalWrite(4,HIGH); 
+digitalWrite(5,HIGH); 
+digitalWrite(6,LOW); 
+digitalWrite(7,HIGH); 
+digitalWrite(8,HIGH);
+}
+void count2(){
+digitalWrite(3,HIGH); 
+digitalWrite(1,LOW); 
+digitalWrite(2,HIGH); 
+digitalWrite(4,LOW); 
+digitalWrite(5,LOW); 
+digitalWrite(6,LOW); 
+digitalWrite(7,LOW); 
+digitalWrite(8,HIGH);
+}
+void count3()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,LOW); 
+digitalWrite(2,LOW); 
+digitalWrite(4,LOW); 
+digitalWrite(5,HIGH); 
+digitalWrite(6,LOW); 
+digitalWrite(7,LOW); 
+digitalWrite(8,HIGH);
+}
+void count4()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,LOW); 
+digitalWrite(2,LOW); 
+digitalWrite(4,HIGH); 
+digitalWrite(5,HIGH); 
+digitalWrite(6,LOW); 
+digitalWrite(7,HIGH); 
+digitalWrite(8,LOW);
+}
+void count5()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,LOW); 
+digitalWrite(2,LOW); 
+digitalWrite(4,LOW); 
+digitalWrite(5,HIGH); 
+digitalWrite(6,HIGH); 
+digitalWrite(7,LOW); 
+digitalWrite(8,LOW);
+}
+void count6()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,LOW); 
+digitalWrite(2,LOW); 
+digitalWrite(4,LOW); 
+digitalWrite(5,LOW); 
+digitalWrite(6,HIGH); 
+digitalWrite(7,LOW); 
+digitalWrite(8,LOW);
+}
+void count7()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,HIGH); 
+digitalWrite(2,LOW); 
+digitalWrite(4,HIGH); 
+digitalWrite(5,HIGH);
+digitalWrite(6,LOW); 
+digitalWrite(7,LOW); 
+digitalWrite(8,HIGH);
+}
+void count8()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,LOW); 
+digitalWrite(2,LOW); 
+digitalWrite(4,LOW); 
+digitalWrite(5,LOW); 
+digitalWrite(6,LOW); 
+digitalWrite(7,LOW); 
+digitalWrite(8,LOW);
+}void count9()
+{
+digitalWrite(3,HIGH); 
+digitalWrite(1,LOW); 
+digitalWrite(2,LOW); 
+digitalWrite(4,LOW); 
+digitalWrite(5,HIGH); 
+digitalWrite(6,LOW); 
+digitalWrite(7,LOW); 
+digitalWrite(8,LOW);
+}
+
+void setup()
+{
+  // initialize the digital pins 1 - 7 as an output. 
+  pinMode(1, OUTPUT); // 7 segement 
+  pinMode(2, OUTPUT); // 7 segement 
+  pinMode(3, OUTPUT); // common anode supply 
+  pinMode(4, OUTPUT); // 7 segement 
+  pinMode(5, OUTPUT); // 7 segement 
+  pinMode(6, OUTPUT); // 7 segement 
+  pinMode(7, OUTPUT); // 7 segement 
+  pinMode(8, OUTPUT); // 7 segement 
+  pinMode(9, INPUT); // for switch
+}
+
+void loop()
+{
+  count0();
+  
+  while (inPin == 1)
+{
+inPin = digitalRead(9);
+}
+delay(100); 
+count3();
+inPin = digitalRead(9); 
+while (inPin == 1)
+{
+inPin = digitalRead(9);
+}
+delay(100); 
+count4();
+inPin = digitalRead(9); 
+while (inPin == 1)
+{
+inPin = digitalRead(9);
+}
+delay(100); 
+count5();
+inPin = digitalRead(9); 
+while (inPin == 1)
+{
+inPin = digitalRead(9);
+}
+delay(100); 
+count6();
+inPin = digitalRead(9); 
+while (inPin == 1)
+{
+inPin = digitalRead(9);
+}
+delay(100); 
+count7();
+inPin = digitalRead(9); 
+while (inPin == 1)
+{
+inPin = digitalRead(9);
+}
+delay(100); 
+count8();
+inPin = digitalRead(9); 
+while (inPin == 1)
+{
+inPin = digitalRead(9);
+}
+delay(100); 
+count9();
+inPin = digitalRead(9); 
+while (inPin == 1)
+{
+inPin = digitalRead(9);
+}
+
+}
