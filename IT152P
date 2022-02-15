@@ -1,0 +1,25 @@
+
+void setup() {
+  pinMode(2, OUTPUT);
+  Serial.begin(9600);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+
+  char receiveVal;
+  if(Serial.available() > 0){
+    receiveVal = Serial.read();
+    Serial.println(receiveVal);
+    if(receiveVal == '1'){
+      digitalWrite(2, HIGH);
+    }
+    else{
+      digitalWrite(3, LOW);
+    }
+  }
+
+  delay(50);
+
+  
+}
